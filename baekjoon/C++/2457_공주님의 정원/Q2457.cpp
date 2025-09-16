@@ -13,7 +13,7 @@ int main(void) {
 	cin.tie(0);
 
 	cin >> N;
-	for (int idx = 0; idx < N; i++) {
+	for (int idx = 0; idx < N; idx++) {
 		int sm, sd, em, ed;
 		cin >> sm >> sd >> em >> ed;
 		flowers.push_back({ sm * 100 + sd, em * 100 + ed });
