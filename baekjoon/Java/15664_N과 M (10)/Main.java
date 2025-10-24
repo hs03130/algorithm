@@ -15,7 +15,6 @@ public class Main {
 
 	static int N, M;
 	static int[] element, selected;
-	static boolean[] isUsed;
 
 	// N개의 자연수 중에서 M개를 고른 수열
 	// 고른 수열은 비내림차순
@@ -31,12 +30,10 @@ public class Main {
 
 		int tmp = 0;
 		for (int idx = k; idx < N; idx++) {
-			if (!isUsed[idx] && element[idx] != tmp) {
+			if (element[idx] != tmp) {
 				selected[selectCnt] = element[idx];
-				isUsed[idx] = true;
 				tmp = element[idx];
 				bt(idx + 1, selectCnt + 1);
-				isUsed[idx] = false;
 			}
 
 		}
@@ -51,7 +48,6 @@ public class Main {
 
 		element = new int[N];
 		selected = new int[M];
-		isUsed = new boolean[N];
 
 		st = new StringTokenizer(br.readLine());
 		for (int idx = 0; idx < N; idx++) {
