@@ -17,13 +17,6 @@ public class Main {
 
 	static final int NOT_VISITED = 0, MAKE_TEAM = -1;
 
-	static void printState() {
-		for (int id : state) {
-			System.out.print(id + " ");
-		}
-		System.out.println();
-	}
-
 	static void check(int start) {
 		int cur = start;
 		while (state[cur] == NOT_VISITED || state[cur] == start) {
